@@ -1,0 +1,18 @@
+.container{
+    max-height: 50em;
+    img{
+        cursor:pointer;
+        margin:1em;
+        height:auto;
+        width:auto;
+        max-height: 40em;
+        max-width:80em;
+        margin-top:0;
+        padding:0;
+        width:calc(100% - 2em);
+        opacity: 0.8;
+    }
+    img:hover{
+        opacity: 1;
+    }
+}

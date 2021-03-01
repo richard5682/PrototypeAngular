@@ -1,0 +1,30 @@
+.wrapper{
+    display:flex;
+    input{
+        border-radius: 2em 0 0 2em;
+        width:80%;
+        margin-top:0.5em;
+        padding:1em;
+        font-family: spartan;
+    }
+    button{
+        border-radius:0 2em 2em 0;
+        width:20%;
+        margin-top:0.4em;
+        height:3.4em;
+        background:chocolate;
+        mat-icon{
+            font-size: 3em;
+            margin-left:-0.5em;
+            color:white;
+        }
+    }
+    @media screen AND(max-width:640px){
+        input{
+            border-radius: 0;
+        }
+        button{
+            border-radius: 0;
+        }
+    }
+}

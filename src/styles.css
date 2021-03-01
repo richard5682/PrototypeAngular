@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family:spartan;
+    src: url(assets/LeagueSpartan-Bold.otf) format("opentype");
+}
+html, body { 
+    height:fit-content;
+    overflow-x: none;
+    background: linear-gradient(rgba(255, 102, 0, 0.233),rgba(255, 255, 255, 0.274));
+}
+body { margin: 0; font-family: Roboto,"Helvetica Neue",sans-serif; }

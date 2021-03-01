@@ -1,0 +1,90 @@
+<div class="wrapper">
+
+  <div class="topblock">
+    <div class="imagepanel">
+      <div class="servicecardslot">
+        <app-service-card *ngIf="service" [service]="service"></app-service-card>
+        <div class="button">
+          
+          <button mat-icon-button
+          matTooltip="book this service"> <mat-icon>book</mat-icon> </button>
+          <button mat-icon-button
+          matTooltip="chat owner"> <mat-icon>chat</mat-icon> </button>
+          <button mat-icon-button
+          matTooltip="bookmark this service"> <mat-icon>bookmark</mat-icon> </button>
+        </div>
+      </div>
+      
+    </div>
+    <div class="infopanel">
+      <div class="header">
+        <h1>INFO PANEL</h1>
+        <app-accountview *ngIf="owner" [username]="owner.username" [id]="service.owner" [header]="false" ></app-accountview>
+      </div>
+      
+      <div class="info">
+        
+        <h3>SERVICE NAME</h3>
+        <p>{{service ? service.title: "TITLE"}}</p>
+        <h3>DESCRIPTION OF SERVICE</h3>
+        <p>{{service ? service.description : "DESCRIPTION"}}</p>
+        <h3>SERVICE OWNER</h3>
+        <p> {{owner ? owner.username : "OWNER"}}</p>
+        <h3>Service CONTACT INFO</h3>
+        <p> {{service ? service.contact: "CONTACT"}} </p>
+      </div>
+    </div>
+  </div>
+  <div class="midblock">
+    <div class="moreinfopanel">
+      <h1>MORE INFO PANEL</h1>
+      <h2>Location</h2>
+      <div class="mapcontainer">
+        <div class="locationinfo">
+          <div class="infoheader">
+            <h3>SERVICE LOCATIONS</h3>
+          </div>
+          <div class="information">
+            <p>Service Location</p>
+            <p>Near Landmark</p>
+          </div>
+        </div>
+        <div class="map">
+          <agm-map [latitude]='14.5' [longitude]='121' [zoom]='15'>
+            <agm-marker [latitude]='14.5' [longitude]='121'></agm-marker>
+          </agm-map>
+                    
+        </div>
+      </div>
+     
+      <h1>FEEDBACK PANEL</h1>
+      <h2>Ratings</h2>
+      <div class="ratingpanel">
+        <app-rating></app-rating>
+        <h2>5/5</h2>
+      </div>
+      <h2>Comments</h2>
+      <div class="commentpanel">
+        
+        <div *ngFor="let comment of comments" class="comment">
+          <div class="accountview">
+            <app-accountview [id]="comment['userid']"></app-accountview>
+          </div>
+          <div class="text">
+            <app-comment [text]="comment['comment']"></app-comment>
+          </div>
+        </div>
+        <div class="inputcomment">
+          <div class="accountview">
+            <app-accountview *ngIf="loginid!=0" [id]="loginid"></app-accountview>
+          </div>
+          <div *ngIf="loginid!=0" class="text">
+            <textarea #comment [rows]='5' [cols]='500'></textarea>
+            <button mat-raised-button (click)="addComments(comment)">SUBMIT</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

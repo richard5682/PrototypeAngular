@@ -1,0 +1,18 @@
+.container{
+    margin-top:6em;
+    h1{
+        background-color: orange;
+        padding:1em;
+        margin:0;
+        color:white;
+    }
+    mat-card{
+        background-color: rgba(210, 105, 30, 0.37);
+        margin:0;
+        float:left;
+        width:20%;
+        app-accountview{
+            float:right;
+        }
+    }
+}

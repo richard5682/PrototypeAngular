@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>{{label}}</mat-label>
+  <input matInput [type]="dtype" [(ngModel)]="text" autocomplete="off">
+  <button *ngIf="type=='password'" mat-icon-button matSuffix
+  (click)="(dtype=='password') ? dtype='text' : dtype='password'">
+    <mat-icon>{{dtype=='password' ? 'visibility':'visibility_off'}}</mat-icon>
+  </button>
+</mat-form-field>

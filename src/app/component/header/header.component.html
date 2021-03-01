@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="firstblock">
+    <div matRipple class="logo" (click)="router.navigate(['homepage'])">
+      <img src="assets/image2.PNG">
+      <h1>CLICK</h1>
+    </div>
+    <app-accountview [id]="loggedinid" [username]="username"></app-accountview>
+  </div>
+  <div class="navblock">
+    <button matTooltip="Home" mat-icon-button (click)="router.navigate(['homepage'])">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button matTooltip="Create Service" (click)="LoggedIn ? router.navigate(['servicecreate']):router.navigate(['login','servicecreate'])" mat-icon-button>
+      <mat-icon>cleaning_services</mat-icon>
+    </button>
+    <button matTooltip="Users" (click)="router.navigate(['accountlist'])" mat-icon-button>
+      <mat-icon>account_box</mat-icon>
+    </button>
+    <button [matTooltip]="LoggedIn ? 'Logout':'Login'" mat-icon-button (click)="LoggedIn ? logout() : router.navigate(['login','homepage'])">
+      <mat-icon>{{LoggedIn ? 'logout' : 'login'}}</mat-icon>
+    </button>
+  </div>
+</div>

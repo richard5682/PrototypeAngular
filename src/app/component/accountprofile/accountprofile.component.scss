@@ -1,0 +1,90 @@
+.wrapper{
+    
+    margin-top:4em;
+    .toppanel{
+        display:flex;
+        .imagepanel{
+            display:flex;
+            text-align: center;
+            margin:0;
+            background: rgba(210, 105, 30, 0.363);
+            width: 50%;
+            .image{
+                padding:5%;
+                width:10em;
+                height:10em;
+                min-width:5em;
+                min-height: 5em;
+                button{
+                    position:relative;
+                    top:-5em;
+                    z-index: 99;
+                }
+                img{
+                    border:solid;
+                    width:100%;
+                    
+                }
+            }
+        }
+        .accountinfo{
+            width: 50%;
+            text-align: center;
+        }
+    }
+
+    .services{
+        width:100%;
+        display:flex;
+        overflow:scroll;
+        
+        .bookmarkservices{
+            background: rgba(0, 0, 0, 0.158);
+            border-right:solid black 1px;
+            width:50%;
+            display:block;
+            h3{
+                background-color: coral;
+                margin:0;
+                font-size: 2em;
+                padding-top:5%;
+                padding-bottom:5%;
+                padding-left:10%;
+                color:white;
+            }
+            .services{
+                max-height:25em;
+                display:flex;
+                flex-wrap:wrap;
+                overflow-y: scroll;
+                justify-content:start;
+            }
+        }
+        .accountservices{
+            background: rgba(0, 0, 0, 0.158);
+            border-left:solid black 1px;
+            width:50%;
+            display:block;
+            h3{
+                background-color: coral;
+                margin:0;
+                font-size: 2em;
+                padding-top:5%;
+                padding-bottom:5%;
+                padding-left:10%;
+                color:white;
+            }
+            .services{
+                max-height:25em;
+                display:flex;
+                flex-wrap:wrap;
+                overflow-y: scroll;
+                justify-content:start;
+            }
+        }
+        .servicecontainer{
+            margin:1.25em;
+            width:20%;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+<div class="wrapper">
+  <div class="container">
+    <mat-horizontal-stepper [linear]='true'>
+      <mat-step label='Account Info'>
+        <app-textbox #username label="username" type="text"></app-textbox>
+        <app-textbox #password label="password" type="password"></app-textbox>
+        <app-textbox #repassword label="repassword" type="password"></app-textbox>
+        <app-textbox #email label="email" type="text"></app-textbox><br>
+        <button mat-raised-button matStepperNext>Next</button>
+      </mat-step>
+      <mat-step label='Personal Info'>
+        <app-textbox #firstname label="firstname" type="text"></app-textbox>
+        <app-textbox #middlename label="middlename" type="text"></app-textbox>
+        <app-textbox #surname label="surname" type="text"></app-textbox>
+        <mat-form-field>
+          <mat-label>Your Birthdate</mat-label>
+          <input #birthday matInput type="date">
+        </mat-form-field><br>
+        <button mat-raised-button matStepperNext>Next</button>
+        <button mat-raised-button matStepperPrevious>Back</button>
+      </mat-step>
+      <mat-step label='Submission'>
+        <h3>Review Your Information</h3>
+        <div class='infoline'>
+          <h4>Username :</h4><p>{{username.text}}</p>
+        </div>
+        <div class='infoline'>
+          <h4>Email :</h4><p>{{email.text}}</p>
+        </div>
+        <div class='infoline'>
+          <h4>Firstname :</h4><p>{{firstname.text}}</p>
+        </div>
+        <div class='infoline'>
+          <h4>Middlename :</h4><p>{{middlename.text}}</p>
+        </div>
+        <div class='infoline'>
+          <h4>Lastname :</h4><p>{{surname.text}}</p>
+        </div>
+        <div class='infoline'>
+          <h4>Birthdate :</h4><p>{{birthday.value}}</p>
+        </div>
+        <button mat-raised-button matStepperPrevious>Back</button>
+        <button mat-raised-button (click)="register(username.text,password.text,email.text)">submit</button>
+      </mat-step>
+        
+    </mat-horizontal-stepper>
+   
+  </div>
+</div>

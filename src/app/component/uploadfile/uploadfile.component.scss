@@ -1,0 +1,21 @@
+.container{
+    width:100%;
+    height: 100%;
+    display:block;
+    background-color: chocolate;
+    .uploadpane{
+        
+        width:20em;
+        height:fit-content;
+    }
+    .imagpane{
+        max-width:15em;
+        max-height:5em;
+    }
+    .helper{
+        h4{
+            margin:0;
+        }
+        display:flex;
+    }
+}

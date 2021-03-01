@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>List Of Users</h1>
+  <div *ngFor="let account of accounts" class="view">
+    <mat-card>
+      <app-accountview [id]="account['id']"></app-accountview>
+    </mat-card>
+    <mat-divider></mat-divider>
+    
+  </div>
+</div>

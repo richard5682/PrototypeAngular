@@ -1,0 +1,12 @@
+.wrapper{
+    mat-grid-list{
+        width:100%;
+        img{
+            width:100%;
+            transition: 0.4s;
+        }
+        img:hover{
+            width:110%;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+<div class="wrapper">
+  <div class="searchbar">
+    <app-searchbar></app-searchbar>
+  </div>
+  <div class="topblock">
+      <div class="menulist">
+ 
+        <div class="list">
+          <div class="buttoncontainer" (click)="GoToServiceList('Cleaning')">
+            <button mat-raised-button>Cleaning</button>
+            <mat-icon>cleaning_services</mat-icon>
+          </div>
+          <div class="buttoncontainer" (click)="GoToServiceList('Laundry')">
+          <button mat-raised-button>Laundry</button>
+          <mat-icon>dry_cleaning</mat-icon>
+        </div>
+          <div class="buttoncontainer" (click)="GoToServiceList('Cooking')">
+          <button mat-raised-button>Cooking</button>
+          <mat-icon>outdoor_grill</mat-icon>
+        </div>
+          <div class="buttoncontainer" (click)="GoToServiceList('Carpentry')">
+          <button mat-raised-button >Carpentry</button>
+          <mat-icon>carpenter</mat-icon>
+        </div>
+          <div class="buttoncontainer" (click)="GoToServiceList('Pets Service')">
+          <button mat-raised-button>Pets</button>
+          <mat-icon>pets</mat-icon>
+        </div>
+        <div class="buttoncontainer" (click)="GoToServiceList('Carpentry')">
+          <button mat-raised-button>Spa</button>
+          <mat-icon>spa</mat-icon>
+        </div>
+        <div class="buttoncontainer" (click)="GoToServiceList('Repair')">
+          <button mat-raised-button>Repair</button>
+          <mat-icon>construction</mat-icon>
+        </div>
+        <div class="buttoncontainer" (click)="GoToServiceList('Techinician')">
+          <button mat-raised-button>Technician</button>
+          <mat-icon>construction</mat-icon>
+        </div>
+        <div class="buttoncontainer" (click)="GoToServiceList('Tutorial Service')">
+          <button mat-raised-button >Tutor</button>
+          <mat-icon>construction</mat-icon>
+        </div>
+        <div class="buttoncontainer" (click)="GoToServiceList('Freelancer')">
+          <button mat-raised-button>Freelancer</button>
+          <mat-icon>construction</mat-icon>
+        </div>
+        <div class="buttoncontainer" (click)="GoToServiceList('Designer')">
+          <button mat-raised-button>Designer</button>
+          <mat-icon>construction</mat-icon>
+        </div>
+        <div class="buttoncontainer"(click)="GoToServiceList('Pets Vet Service')">
+          <button mat-raised-button>misc</button>
+          <mat-icon>construction</mat-icon>
+        </div>
+        </div>
+        
+      </div>
+      <div class="billboard">
+        <div class="billboard_panel">
+          <app-billboard></app-billboard>
+        </div>
+        <div class="billboard_wide">
+          <app-billboard-wide></app-billboard-wide>
+        </div>
+      </div>
+  </div>
+  <div class="middleblock">
+    <div class="headline">
+      <h1>POPULAR SERVICES</h1>
+    </div>
+    <h1>CLEANING</h1>
+    <div class="servicelist_panel">
+        <app-service-list servicetype="Cleaning" maxnumber=15></app-service-list>
+    </div>
+    <h1>CARPENTRY</h1>
+    <div class="servicelist_panel">.
+      <app-service-list servicetype="Carpentry" maxnumber=15></app-service-list>
+    </div>
+    
+
+    <div class="headline">
+      <h1>UTILITIES SERVICES</h1>
+    </div>
+    <h1> UTILITIES </h1>
+    <div class="servicelist_panel">.
+      <app-service-list servicetype="Electrical" maxnumber=5></app-service-list>
+      <app-service-list servicetype="Techinician" maxnumber=5></app-service-list>
+      <app-service-list servicetype="Repair" maxnumber=5></app-service-list>
+      <app-service-list servicetype="Automotive" maxnumber=5></app-service-list>
+      <app-service-list servicetype="Appliance Installation" maxnumber=5></app-service-list>
+    </div>
+
+
+    <div class="headline">
+      <h1>MORE SERVICES</h1>
+    </div>
+    <h1> HOUSE SERVICES </h1>
+    <div class="servicelist_panel">.
+      <app-service-list servicetype="Laundry" maxnumber=5></app-service-list>
+      <app-service-list servicetype="Food Service" maxnumber=5></app-service-list>
+      <app-service-list servicetype="Cleaning" maxnumber=5></app-service-list>
+      <app-service-list servicetype="Spa" maxnumber=5></app-service-list>
+    </div>
+
+    <h1> EDUCATIONAL </h1>
+    <div class="servicelist_panel">.
+      <app-service-list servicetype="Tutorial Service" maxnumber=5></app-service-list>
+    </div>
+
+    <h1> PETS </h1>
+    <div class="servicelist_panel">.
+      <app-service-list servicetype="Pets Service" maxnumber=5></app-service-list>
+      <app-service-list servicetype="Pets Vet Service" maxnumber=5></app-service-list>
+    </div>
+
+    
+
+  </div>
+</div>

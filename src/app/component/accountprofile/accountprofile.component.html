@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <div class="toppanel">
+    <div class="imagepanel">
+      <div class="image">
+        <img [src]="profileimage ? 'http://'+domain+'/lib/image/profilepictures/'+profileimage+'.PNG'
+        : 'http://'+domain+'/lib/image/profile/default.PNG'">
+      </div>
+      <div class="rightcontainer">
+        <div class="infocontainer">
+          <h3>{{username}}:</h3>
+          <h3>{{id}}</h3>
+        </div>
+        <div class="buttoncontainer">
+          <button *ngIf="id==loggedin_id" (click)="gotoconfig()"  mat-icon-button>
+            <mat-icon >account_box</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="accountinfo">
+      <h3> INFORMATION PANEL</h3>
+    </div>
+  </div>
+
+  <div class="services">
+    <div class="bookmarkservices">
+      <h3>Bookmark Services</h3>
+      <!-- ADD NGFOR HERE -->
+      <div class="services">
+        
+      </div>
+    </div>
+      
+    <div class="accountservices">
+      <h3>My Services</h3>
+      <div class="services">
+
+        <div *ngFor="let service of myservice" class="servicecontainer">
+          <app-service-card [service]="service"></app-service-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>

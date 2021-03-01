@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="container">
+    <h1>LOGIN</h1>
+    <app-textbox #username label="USERNAME" type="text"></app-textbox><br>
+    <app-textbox #password label="PASSWORD" type="password"></app-textbox><br>
+    <button mat-raised-button 
+    (click)="login(username.text,password.text)">LOGIN</button>
+    <button mat-raised-button 
+    (click)="routeToRegister()">Register</button>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <mat-card (click)="router.navigate(['service',id])" matRipple>
+    <div class="imageslot">
+      <img [src]="'http://'+domain+'/lib/image/servicethumbnail/'+thumbnail+'.PNG'">
+    </div>
+    <h4>{{title}}</h4>
+    <div class="ratingcontainer">
+      <app-rating></app-rating>
+    </div>
+  </mat-card>
+</div>

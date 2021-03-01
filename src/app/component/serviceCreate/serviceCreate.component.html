@@ -1,0 +1,23 @@
+<mat-vertical-stepper>
+  <mat-step label="Step 1. Service Info">
+    <app-textbox #title label="Title"></app-textbox>
+    <app-textbox #desc label="Description"></app-textbox>
+    <app-textbox #contact label="Contact"></app-textbox>
+  </mat-step>
+  <mat-step label="Step 2. Service Picture">
+    <app-uploadfile (uploading)="uploadstart()" (filedoneupload)="thumbnaildone($event)" phpfile="servicethumbnail" maxsize=1000000></app-uploadfile>
+  </mat-step>
+  <mat-step label="Step 3. Type of service">
+   <mat-form-field>
+     <mat-label>Type Of Service</mat-label>
+     <mat-select #type>
+      <mat-option *ngFor="let service of services" [value]="service.servicetype">
+        {{service.servicetype}}
+      </mat-option>
+     </mat-select>
+   </mat-form-field>
+  </mat-step>
+  <mat-step label="Submit">
+    <button (click)="submit(title.text,desc.text,contact.text,type.value)" mat-raised-button [disabled]="!thumbnailupload">SUBMIT SERVICE</button>
+  </mat-step>
+</mat-vertical-stepper>>

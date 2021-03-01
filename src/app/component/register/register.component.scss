@@ -1,0 +1,27 @@
+.wrapper{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    
+    .container{
+        width:80%;
+        mat-horizontal-stepper{
+            border-radius:2em;
+        }
+        
+    }
+    .infoline{
+        height:fit-content;
+        display:flex;
+        flex-direction: row;
+        justify-content: left;
+        padding:0.4em;
+        h4{
+            margin:0;
+        }
+        p{
+            margin:0;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<div class="wrapper">
+
+  <div class="container">
+    <div class="changeprofile">
+      <h4>CHANGE PROFILE PICTURE</h4>
+      <app-uploadfile (filedoneupload)="updateProfile($event)" phpfile="profilepictures" maxsize="500000"></app-uploadfile>
+    </div>
+    <div class="changeusername">
+      <h4>CHANGE INFO</h4>
+      <app-textbox label="username"></app-textbox>
+      <app-textbox label="email"></app-textbox>
+      <button mat-raised-button>Submit</button>
+    </div>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,177 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display:block;
+    .topblock{
+        width:100%;
+        margin-top:5em;
+        
+        display:flex;
+        flex-wrap:nowrap;
+        .imagepanel{
+            width:20%;
+            padding-right:4em;
+            padding-bottom: 2em;
+            margin:0;
+            background-color: rgba(255, 136, 0, 0.404);
+            .servicecardslot{
+                margin:0%;
+                padding:1em;
+                width:100%;
+                
+            }
+        }
+        .infopanel{
+            border-left: solid rgba(255, 166, 0, 0.418);
+            background-color: rgba(255, 166, 0, 0.349);
+            width:80%;
+            .header{
+                background-color: orange;
+                display:flex;
+                justify-content: space-between;
+                h1{
+                    margin:0;
+                    padding:0.4em;
+                    color:white;
+                    
+                }
+            }
+            
+            .info{
+                
+                h3{
+                    margin:0.1em;
+                }
+                p{
+                    margin:0;
+                }
+                padding-left:1em;
+            }
+            
+        }
+        
+    }
+    .midblock{
+        .moreinfopanel{
+            
+            h1{
+                margin:0;
+                padding: 0.2em 0 0.2em 1em;
+                background-color: orange;
+                color:white;
+            }
+            
+        }
+        h2{
+            background-color: white;
+            padding:1em;
+            
+            
+            margin:0;
+        }
+        .ratingpanel{
+            padding-left:1em;
+            display:flex;
+            app-rating{
+                font-size: 3em;
+            }
+            h2{
+                margin-top:0.4em;
+            }
+        }
+        .commentpanel{
+            width:100%;
+            padding-left:1em;
+            border-radius: 2em;
+            background-color: rgba(255, 166, 0, 0.616);
+            display:flex;
+            flex-direction: column;
+            .comment{
+                width:100%;
+                padding:1em;
+                display:flex;
+                
+                padding-bottom:0;
+                .accountview{
+
+                    padding:0;
+                    width:15%;
+                    app-accountview{
+                        float:right;
+                        padding-right:0.2em;
+                        
+                    }
+                }
+                .text{
+                    width:fit-content;
+                }
+                
+                
+            }
+            .inputcomment{
+                padding:1em;
+                display:flex;
+                .accountview{
+
+                    padding:0;
+                    width:15%;
+                    app-accountview{
+                        float:right;
+                        padding-right:0.2em;
+                        
+                    }
+                }
+                .text{
+                    width:fit-content;
+                    textarea{
+                        width:90%;
+                        padding:1em;
+                        height:4em;
+                    }
+                    button{
+                        position: relative;
+                        padding:0.2em;
+                        width:20%;
+                        left:70%;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+.mapcontainer{
+    border:solid black 1px;
+    display:flex;
+    justify-content: center;
+    .locationinfo{
+        width:100%;
+        .infoheader{
+            background-color: orange;
+            margin:0;
+            width:100%;
+            padding:1em;
+            color:white;
+            h3{
+                margin:0;
+            }
+        }
+        
+    }
+    .map{
+        border:solid black 2px;
+        height:20em;
+        width:20em;
+        agm-map{
+            height:20em;
+            width:20em;
+            
+        }
+    }
+    @media screen AND(max-width:465px){
+        .locationinfo{
+            display:none;
+        }
+    }
+}
+
