@@ -87,6 +87,7 @@ export class AppComponent implements OnInit{
     document.getElementById('header').style.top=height-this.heightc+'px';
     document.getElementById('providerview').style.height="100%";
     this.appheader.changeBg('#007E33');
+    this.appheader.changeBorderRad('1em 1em 0em 0em');
     this.serviceview = false;
   }
   doserviceview(){
@@ -95,6 +96,7 @@ export class AppComponent implements OnInit{
     document.getElementById('header').style.top="0em";
     document.getElementById('providerview').style.height="0%";
     this.appheader.changeBg('chocolate');
+    this.appheader.changeBorderRad('0em 0em 1em 1em');
     this.serviceview = true;
   }
   @HostListener('window:resize',['$event'])

@@ -76,7 +76,7 @@ import { ServiceclickedService } from './service/serviceclicked.service';
       {path:'servicecreate',component:ServiceCreateComponent},
       {path:'accountlist',component:AccountListComponent},
       {path:'servicelist/:type',component:ServiceListPageComponent}
-    ]),
+    ], { useHash: true }),
     FormsModule,HttpClientModule,AgmCoreModule.forRoot({apiKey:'AIzaSyBdMnd8ytUKFpPPc1lavM_ww_1CxJMvqOg'})
   ],
   providers: [ConnectService,LoginService,FetchService,ServiceclickedService],

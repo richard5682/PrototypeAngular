@@ -52,6 +52,6 @@ export class HeaderComponent implements OnInit {
     document.getElementById('wrapper').style.backgroundColor = color;
   }
   changeBorderRad(rad){
-    document.getElementById('wrapper').style.borderRadius = ' 0em 0em '+rad+' '+rad;
+    document.getElementById('wrapper').style.borderRadius = rad;
   }
 }
