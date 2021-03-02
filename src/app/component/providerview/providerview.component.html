@@ -1,0 +1,61 @@
+<div class="wrapper">
+  <mat-tab-group>
+    
+    <mat-tab label="Notifications">
+      <h1>Notifcation</h1>
+      <div class="container">
+          <div  *ngFor="let service of services"  class="service">
+            <app-service-card matBadge="5" matBadgeSize="large" 
+            [service]="service"></app-service-card>
+          </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Statistics">
+      <h1>Your Statistics</h1>
+      <div class="statswrapper">
+        <div *ngFor="let service of services" class='statscontainer'>
+          <div  class="service">
+            <app-service-card [service]="service"></app-service-card>
+          </div>
+          <div class="stats">
+            <img src='assets/stats.PNG'>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Task Manager">
+      <h1>Your Week</h1>
+      <div class='taskmanager'>
+        <div class='task'>
+          <mat-card>
+            <mat-card-title class='lightgreen'>Ricardo Cleaning</mat-card-title>
+            <mat-card-subtitle>Monday</mat-card-subtitle>
+            <mat-card-content>
+              <p>Client Name: Angular Malou </p>
+              <p>Location: Block 9 Angular St. Sta.Mesa , Manila</p>
+              <p>Time: 1:00pm - 3:00pm</p>
+            </mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-title class='orange'>Ricardo Carpentry</mat-card-title>
+            <mat-card-subtitle>Tuesday</mat-card-subtitle>
+            <mat-card-content>
+              <p>Client Name: Carlos Mailan</p>
+              <p>Location: Block 3 Phase 2 Everwing Subd. Novaliches</p>
+              <p>Time: 9:00am - 1:00pm </p>
+            </mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-title class='lightblue'>Ricardo Tutoring</mat-card-title>
+            <mat-card-subtitle>Wednesday</mat-card-subtitle>
+            <mat-card-content>
+              <p>Client Name: Kimbob Bimby</p>
+              <p>Location: Ortigas</p>
+              <p>Time 1:00pm - 3:00pm :</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </mat-tab>
+</mat-tab-group>
+</div>

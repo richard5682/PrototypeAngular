@@ -31,6 +31,9 @@ import { FetchService } from './service/connect/fetch.service';
 import { AccountListComponent } from './component/accountList/accountList.component';
 import { ServiceListPageComponent } from './component/serviceListPage/serviceListPage.component';
 import { AgmCoreModule } from '@agm/core';
+import { ProviderviewComponent } from './component/providerview/providerview.component';
+import { ProviderServicestatsComponent } from './component/provider-servicestats/provider-servicestats.component';
+import { ServiceclickedService } from './service/serviceclicked.service';
 
 @NgModule({
   declarations: [			
@@ -54,7 +57,9 @@ import { AgmCoreModule } from '@agm/core';
     AccountConfigComponent,
     ServiceCreateComponent,
     AccountListComponent,
-    ServiceListPageComponent
+    ServiceListPageComponent,
+    ProviderviewComponent,
+    ProviderServicestatsComponent
    ],
   imports: [
     BrowserModule,
@@ -74,7 +79,7 @@ import { AgmCoreModule } from '@agm/core';
     ]),
     FormsModule,HttpClientModule,AgmCoreModule.forRoot({apiKey:'AIzaSyBdMnd8ytUKFpPPc1lavM_ww_1CxJMvqOg'})
   ],
-  providers: [ConnectService,LoginService,FetchService],
+  providers: [ConnectService,LoginService,FetchService,ServiceclickedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { FetchService } from 'src/app/service/connect/fetch.service';
 import { LoginService } from 'src/app/service/connect/login.service';
@@ -16,11 +16,21 @@ export class ServicepageComponent implements OnInit, OnDestroy {
   comments;
   loginid=0;
   subscribelogin : Subscription;
-  constructor(private route:ActivatedRoute,private fetch:FetchService
+  constructor(private route:ActivatedRoute,private router:Router,private fetch:FetchService
     ,private loginservce:LoginService) { }
 
   ngOnInit() {
-    this.serviceid = this.route.snapshot.paramMap.get('id');
+    this.initializepage(this.route.snapshot.paramMap.get('id'));
+    this.route.params.subscribe(
+      params => {
+        this.router.routeReuseStrategy.shouldReuseRoute = function () {
+          return false;
+        };
+      }
+    );
+  }
+  initializepage(id){
+    this.serviceid = id;
     this.fetch.fetchService(null,null,this.serviceid,1).subscribe(
       data => {
         if(data['result']==1){

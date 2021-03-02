@@ -1,2 +1,11 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<div id="providerview" class="blocker">
+    <h1>PROVIDER VIEW</h1>
+    <app-providerview></app-providerview>
+</div>
+<div id="header" class="header" >
+    <app-header (logoclicked)="headerClick()"></app-header>
+</div>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>
+

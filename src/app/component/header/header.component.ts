@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/service/connect/login.service';
 import { AccountviewComponent } from '../accountview/accountview.component';
@@ -10,6 +10,7 @@ import { AccountviewComponent } from '../accountview/accountview.component';
 })
 export class HeaderComponent implements OnInit {
   @ViewChild(AccountviewComponent) accview:AccountviewComponent;
+  @Output('logoclicked') logoclicked = new EventEmitter();
   router:Router;
   username:string='GUEST';
   LoggedIn:boolean = false;
@@ -43,5 +44,14 @@ export class HeaderComponent implements OnInit {
   logout(){
     this.loginservice.logout();
     this.router.navigate(['homepage']);
+  }
+  logoClicked(){
+    this.logoclicked.emit();
+  }
+  changeBg(color){
+    document.getElementById('wrapper').style.backgroundColor = color;
+  }
+  changeBorderRad(rad){
+    document.getElementById('wrapper').style.borderRadius = ' 0em 0em '+rad+' '+rad;
   }
 }

@@ -1,8 +1,10 @@
 .wrapper{
+    cursor: pointer;
     background-color: chocolate;
     display:block;
     border-radius: 0 0 1em 1em;
     width:100%;
+    transition: 1s;
     .firstblock{
         display:flex;
         justify-content: space-between;

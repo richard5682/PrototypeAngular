@@ -33,6 +33,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatBadgeModule} from '@angular/material/badge';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 @NgModule({
   imports: [
     CommonModule,
@@ -70,7 +72,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSortModule,
     MatPaginatorModule,
     MatRippleModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatBadgeModule,
+    DragDropModule
   ],
   exports:[
     BrowserAnimationsModule,
@@ -106,7 +110,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSortModule,
     MatPaginatorModule,
     MatRippleModule,
-    MatNativeDateModule],
+    MatNativeDateModule,
+    MatBadgeModule,
+    DragDropModule],
     
   declarations: [MaterialComponent]
 })

@@ -76,6 +76,7 @@
             overflow: scroll;
             overflow-y:hidden;
             margin-top:0em;
+            border-bottom:solid chocolate 10px;
         }
         .headline{
             h1{
@@ -106,7 +107,7 @@
         }
     }
     @media screen AND(max-width:640px){
-        margin-top:4em;
+        margin-top:0em;
         
     }
     @media screen AND (min-width: 640px){
